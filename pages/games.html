@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <script src="../assets/data/games.js"></script>
+    <script
+      crossorigin="anonymous"
+      src="https://kit.fontawesome.com/5e68800c4a.js"
+    ></script>
+    <link
+      crossorigin="anonymous"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      rel="stylesheet"
+    />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/facts.css" rel="stylesheet" />
+    <link href="../assets/css/films.css" rel="stylesheet" />
+    <link href="../assets/css/mouse-trail-snowball.css" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Poppins&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../assets/css/darkmode.css" />
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/darkmode.css" />
+
+    <title>Santafied | Games</title>
+  </head>
+
+  <body id="films">
+    <!-- Header Included here --> 
+	<div id="header">
+		<script src="../assets/js/pages-header.js"></script>
+	</div>
+	<!-- Header ends here -->
+  
+    <div class="container">
+      <h1 class="title">Christmas Games</h1>
+      <div class="row">
+        <div class="col-4">
+          <div class="list-group" id="list-tab" role="tablist"></div>
+        </div>
+        <!-- :::END OF MENU TO FILTER GAMES :::-->
+
+        <!-- ::: CARDS OF GAMES (add games in the assets-> data-> games.js file):::-->
+        <div class="col-8">
+          <div class="tab-content" id="nav-tabContent">
+            <div class="tab-pane active">
+              <div class="card mb-3" style="max-width: 670px;">
+                <div class="row no-gutters">
+                  <div class="col-md-12 col-lg-4">
+                    <img alt="..." class="card-img" id="cardImage" src="" />
+                  </div>
+                  <div class="col-md-12 col-lg-8">
+                    <div class="card-body">
+                      <h5 class="card-title" id="cardTitle"></h5>
+                      <p class="card-text" id="cardText"></p>
+                      <p>
+                        <a class="btn btn-danger" href="" id="cardLink"
+                          >View Game</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ::: END CARDS OF GAMES :::-->
+      </div>
+    </div>
+
+    <!-- Footer Included here --> 
+	<div id="footer">
+		<script src="../assets/js/pages-footer.js"></script>
+	</div>
+	<!-- Footer ends here -->
+	
+    <script src="../assets/js/darkmode.js"></script>
+
+    <script src="../assets/js/mouse-trail-snowball.js"></script>
+    <script src="../assets/js/navLink-generator.js"></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    ></script>
+    <script
+      crossorigin="anonymous"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    ></script>
+    <script>
+      //load first item on the list
+      $(document).ready(function() {
+        imgCardElem.src = linkList[0].imageLink;
+        imgCardElem.alt = linkList[0].title;
+        titleCardElem.innerHTML = linkList[0].title;
+        textCardElem.innerHTML = linkList[0].description;
+        linkCardElem.href = linkList[0].link;
+      });
+
+      const listGroup = document.getElementById("list-tab");
+      const element = document.getElementById("list-tab");
+      const linkClass = "list-group-item list-group-item-action";
+      const linkDataToggle = "list";
+      const linkRole = "tab";
+      //loop through list, create new nodes for each and display
+      for (var i = 0; i < linkList.length; i++) {
+        let divElem = document.createElement("div");
+        let str = linkList[i].title.replace(/\s/g, "");
+        divElem.innerHTML = linkList[i].title;
+        divElem.setAttribute("id", str);
+        divElem.setAttribute("onclick", "showCard(" + i + ")");
+        divElem.setAttribute("class", "list-group-item list-group-item-action");
+        element.appendChild(divElem);
+      }
+
+      const imgCardElem = document.getElementById("cardImage");
+      const titleCardElem = document.getElementById("cardTitle");
+      const textCardElem = document.getElementById("cardText");
+      const linkCardElem = document.getElementById("cardLink");
+      const listGroupFirst = listGroup.firstElementChild;
+      listGroupFirst.classList.add("active");
+
+      // when list link is clicked show info based on id
+      function showCard(id) {
+        imgCardElem.src = linkList[id].imageLink;
+        imgCardElem.alt = linkList[id].title;
+        titleCardElem.innerHTML = linkList[id].title;
+        textCardElem.innerHTML = linkList[id].description;
+        linkCardElem.href = linkList[id].link;
+        //linkCardElem.text = linkList[id].title;
+        for (var x = 0; x < linkList.length; x++) {
+          let allId = linkList[x].title.replace(/\s/g, "");
+          document.getElementById(allId).classList.remove("active");
+        }
+        let crdId = linkList[id].title.replace(/\s/g, "");
+        document.getElementById(crdId).classList.add("active");
+      }
+    </script>
+  </body>
+</html>

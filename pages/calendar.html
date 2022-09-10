@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+
+    <script src="../assets/js/lazyloading.js"></script>
+    <script crossorigin="anonymous" src="https://kit.fontawesome.com/5e68800c4a.js"></script>
+    <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet" />
+    <link href="../assets/css/main.css" rel="stylesheet" />
+    <link href="../assets/css/facts.css" rel="stylesheet" />
+    <link href="../assets/css/films.css" rel="stylesheet" />
+    <link href="../assets/css/calendar.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="../assets/css/mouse-trail-snowball.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../assets/css/darkmode.css" />
+    <link rel="shortcut icon" type="image/png" href="../img/favicon.png">
+    <title>Calendar</title>
+</head>
+
+<body>
+
+    <!-- Header Included here --> 
+	<div id="header">
+		<script src="../assets/js/pages-header.js"></script>
+	</div>
+	<!-- Header ends here -->
+
+
+    <!-- Calendar -->
+    <!-- <table border='1'  bordercolor='#FFFF00' cellspacing='0' cellpadding='0' align=center>
+<tr><td><table cellspacing='0' cellpadding='0' align=center width='100' border='1'><tr><td  align=center bgcolor='#ffff00'><font size='4' face='Tahoma'> <a href='html_calendar.php?prm=10&chm=-1' rel="nofollow"><</a></font> </td><td colspan=5 align=center bgcolor='#ffff00'><font size='4' face='Tahoma'>December</font> </td><td  align=center bgcolor='#ffff00'><font size='4' face='Tahoma'> <a href='html_calendar.php?prm=10&chm=1' rel="nofollow">></a>  </font></td></tr><tr><td><font size='4' face='Tahoma'><b>Sun</b></font></td><td><font size='4' face='Tahoma'><b>Mon</b></font></td><td><font size='4' face='Tahoma'><b>Tue</b></font></td><td><font size='4' face='Tahoma'><b>Wed</b></font></td><td><font size='4' face='Tahoma'><b>Thu</b></font></td><td><font size='4' face='Tahoma'><b>Fri</b></font></td><td><font size='4' face='Tahoma'><b>Sat</b></font></td></tr><tr><td> </td><td> </td><td valign=top><font size='5' face='Tahoma'>1  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>2  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>3  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>4  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>5  
+<br>
+ </font></td></tr><tr><td valign=top><font size='5' face='Tahoma'>6  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>7  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>8  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>9  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>10  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>11  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>12  
+<br>
+ </font></td></tr><tr><td valign=top><font size='5' face='Tahoma'>13  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>14  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>15  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>16  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>17  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>18  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>19  
+<br>
+ </font></td></tr><tr><td valign=top><font size='5' face='Tahoma'>20  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>21  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>22  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>23  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>24  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>25  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>26  
+<br>
+ </font></td></tr><tr><td valign=top><font size='5' face='Tahoma'>27  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>28  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>29  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>30  
+<br>
+ </font></td><td valign=top><font size='5' face='Tahoma'>31  
+<br>
+ </font></td></tr></table></td></tr></table> -->
+    <!-- Calendar -->
+
+    <div class="month">
+        <ul>
+            <li class="prev">&#10094;</li>
+            <li class="next">&#10095;</li>
+            <li>December<br><span style="font-size:18px">2019</span></li>
+        </ul>
+    </div>
+
+    <ul class="weekdays">
+        <li>Sun</li>
+        <li>Mon</li>
+        <li>Tue</li>
+        <li>Wed</li>
+        <li>Thur</li>
+        <li>Fri</li>
+        <li>Sat</li>
+    </ul>
+
+    <ul class="days">
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li><span class="active">10</span></li>
+        <li>11</li>
+        <li>12</li>
+        <li>13</li>
+        <li>14</li>
+        <li>15</li>
+        <li>16</li>
+        <li>17</li>
+        <li>18</li>
+        <li>19</li>
+        <li>20</li>
+        <li>21</li>
+        <li>22</li>
+        <li>23</li>
+        <li>24</li>
+        <li>25</li>
+        <li>26</li>
+        <li>27</li>
+        <li>28</li>
+        <li>29</li>
+        <li>30</li>
+        <li>31</li>
+    </ul>
+
+
+
+	<!-- Footer Included here --> 
+	<div id="footer">
+		<script src="../assets/js/pages-footer.js"></script>
+	</div>
+	<!-- Footer ends here -->
+  
+    <script src="../assets/js/darkmode.js"></script>
+
+    <script src="../assets/js/mouse-trail-snowball.js"></script>
+    <script src="../assets/js/navLink-generator.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" src="https://code.jquery.com/jquery-3.4.1.min.js">
+    </script>
+    <script crossorigin="anonymous" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js">
+    </script>
+    <script crossorigin="anonymous" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript">
+
+        // grab the tab shown event and move the document on top by callling
+        // scrollTop method.
+
+        $('a[data-toggle="list"]').on('shown.bs.tab', function (e) {
+            //e.target // newly activated tab
+            //e.relatedTarget // previous active tab
+            //$(window).scrollTop(0);
+            $("html, body").animate({ scrollTop: 0 }, 10);
+        })
+    </script>
+</body>
+
+</html>

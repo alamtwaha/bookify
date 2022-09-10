@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap');
+
+
+body {
+  /* min-width: 100%; */
+  overflow-x: hidden;
+  font-family: 'Bitter', serif;
+}
+
+div.products {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  margin-top: 2em;
+}
+
+/* #giftsPage {
+  background-color: #ff4546;
+} */
+
+#bannerImage {
+  position: relative;
+}
+
+#bannerImage {
+  height: 50vh;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+#banner {
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#banner .caption {
+  width: 100%;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  font-size: 2em;
+  text-shadow: 3px 2px 1px rgba(0, 0, 0, 0.6);
+  padding: 30px;
+}
+
+/* section#giftsPage {
+  height: 90vh;
+} */
+#note {
+  padding: 20px;
+  /* border-top: 2px solid rgba(255, 255, 255, 0.8); */
+  font-size: 1.8em;
+  color: #fff; /* Better visibility over brown background */
+  text-shadow: 2px 2px 5px #000000;
+  text-align: center;
+  background-color: brown;
+  margin-bottom: 40px;
+}
+
+#giftList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  background-color: #ff4546;
+  /* border-top: 2px solid rgba(255, 255, 255, 0.8); */
+  margin-bottom: 40px;
+}
+
+.cardBackground {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.card-img-top {
+  height: 50%;
+}
+
+.card-title,
+.card-text {
+  color: white;
+}
+
+.single-product {
+  border-radius: 15px;
+  margin: 10px !important;
+}
+
+.single-product img {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.single-product .content {
+  padding-top: 10px;
+  padding-left: 20px;
+}
+
+.single-product span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.single-product-2 {
+  border-radius: 15px;
+  height: 100%;
+}
+
+.single-product-2 img {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  height: 250px;
+}
+
+.single-product-2 .content {
+  padding-left: 40px;
+}
+
+.single-product-2 span {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.img-fluid {
+  width: 100vw;
+  height: 100%;
+  border: 1px groove black;
+}
+
+.img-fluid.plush-toys {
+  height: 150px;
+  width: auto;
+  object-fit: cover;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  width: 100vw;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+@media screen and (max-width: 600px) {
+  #banner .caption {
+    font-size: 1em;
+    margin-top: 10%;
+  }
+}
+
+/* Want to vertically center price, title and button */
+
+.content.col-md-6.col-sm-12 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+   background-color: cornflowerblue;
+}
+
+.card-body.row.p-0 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
